@@ -1,0 +1,77 @@
+{
+    "enabled": false,
+    "coin": "placeh.json",
+
+    "auxes": [],
+    "address": "ENTER POOL PHL WALLET ADDRESS",
+
+    "rewardRecipients": {
+// This example would send a 1.5% pool fee to the address listed below. If you do not wish to have a pool fee, 
+//delete the line entirely. You can add as many different fees/addresses as you wish.
+        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5,
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+//Declare, in seconds, how often payments should be processed
+        "paymentInterval": 600,
+//How much does a miner need to have accumulated to be paid out?
+        "minimumPayment": 1,
+        "daemon": {
+            "host": "127.0.0.1",
+// The following 3 lines mimic the information set you in your placeh.conf for your daemon
+            "port": 19332,
+            "user": "testuser",
+            "password": "testpass"
+        }
+    },
+
+    "ports": {
+        "3008": {
+            "diff": 8
+        },
+        "3032": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3256": {
+//The diff has been set to 100k to more easily allow for asics/nicehash. This can be changed to any number
+            "diff": 100000
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+// The following three lines mimic the information set in your placeh.conf for the daemon
+            "port": 19332,
+            "user": "testuser",
+            "password": "testpass"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}
