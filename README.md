@@ -4,6 +4,10 @@
 
 #### PLACEHOLDER EDITION
 
+
+================================================================================================
+
+
 This repo has been forked and edited by Brewhaus to support Pooling for Placeholder. The directions below are still applicable.
 
 However there are a couple of notes/modification:
@@ -24,6 +28,9 @@ navigate to /unomp/scripts  and type
 gcc blocknotify.c -o blocknotify
 
 At this point, you can run the pool as normal per the instructions below.
+
+
+==================================================================================================
 
 
 This repo will serve as an open source multipool. Multipool capabilities are in alpha testing in this version. This will give the ability to utilize NOMP with merged capabilities but NO merged coin payouts. *ONLY* the main chain coins will payout and calculate correctly at the moment.
