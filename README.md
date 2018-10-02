@@ -2,6 +2,30 @@
 
 #### Unified NOMP
 
+#### PLACEHOLDER EDITION
+
+This repo has been forked and edited by Brewhaus to support Pooling for Placeholder. The directions below are still applicable.
+
+However there are a couple of notes/modification:
+
+The first being, I have preoncfigured the different config files that the following Unomp instructions walk you through. 
+The only thing that you should need to change in these configs is the IP address of your pool and your pools PHL wallet address.
+
+I have added 2 extra files to the repo:
+
+placeh.conf - This is the conf file to use with the placeh daemon. Just place this file in your ~/.placeh directory. All pre-configured for pool use.
+
+transactions.js - After installation of the unomp pool is complete, modifications had to be made to allow Placeholder blocks to be validated, rather than rejected.
+Overwrite transactions.js found in unomp/merged_pooler/lib/ with this transactions.js
+
+The preconfigured placeh.conf also assumes that you have opted for the optional blocknotify.c script. When unomp installation is done
+navigate to /unomp/scripts  and type
+
+gcc blocknotify.c -o blocknotify
+
+At this point, you can run the pool as normal per the instructions below.
+
+
 This repo will serve as an open source multipool. Multipool capabilities are in alpha testing in this version. This will give the ability to utilize NOMP with merged capabilities but NO merged coin payouts. *ONLY* the main chain coins will payout and calculate correctly at the moment.
 
 This portal is an extremely efficient, highly scalable, all-in-one, easy to setup cryptocurrency mining pool written in Node.js. 

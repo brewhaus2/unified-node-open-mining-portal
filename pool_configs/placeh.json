@@ -21,8 +21,8 @@
             "host": "127.0.0.1",
 // The following 3 lines mimic the information set you in your placeh.conf for your daemon
             "port": 19332,
-            "user": "testuser",
-            "password": "testpass"
+            "user": "user",
+            "password": "password"
         }
     },
 
@@ -51,8 +51,8 @@
             "host": "127.0.0.1",
 // The following three lines mimic the information set in your placeh.conf for the daemon
             "port": 19332,
-            "user": "testuser",
-            "password": "testpass"
+            "user": "user",
+            "password": "password"
         }
     ],
 
